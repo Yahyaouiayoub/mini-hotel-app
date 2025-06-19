@@ -23,7 +23,7 @@ export default function Welcome() {
             className="mx-auto mb-6 w-40 h-40 object-cover rounded-full shadow-lg"
           />
           <h1 className="text-4xl md:text-5xl font-semibold mb-4">
-            Bienvenue au Hotel Luxe
+            Bienvenue au Hotel Minnova
           </h1>
           <p className="text-xs md:text-2xl font-light font-serif">
             Vivez un service exceptionnel à portée de main
