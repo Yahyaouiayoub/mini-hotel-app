@@ -37,7 +37,7 @@ export default function ArticlesList({ articles }) {
                 />
               </div>
               <div className="flex flex-col justify-between">
-                <h1 className="text-xl font-semibold font-serif">
+                <h1 className="font-semibold font-serif">
                   {article.title}
                 </h1>
                 {/* <p className="text-gray-600 mb-4">{article.description}</p> */}
@@ -49,8 +49,8 @@ export default function ArticlesList({ articles }) {
                 <button onClick={() => {
                             setSelectedArticle(article);
                             setQuantity(1);
-                          }} className="w-full flex bg-amber-400 text-white py-3 rounded-lg hover:bg-amber-600 ">
-                  <CirclePlus className="mx-2 h-6 w-6" /> <span className='text-xl'>DEMANDE</span>
+                          }} className="flex bg-amber-400 text-white py-3 px-4 rounded-lg hover:bg-amber-600 ">
+                  <CirclePlus className="mx-2 h-5 w-5" /> <span className=''>DEMANDE</span>
                 </button>
               </div>
             </div>
