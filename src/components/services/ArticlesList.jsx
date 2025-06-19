@@ -37,12 +37,13 @@ export default function ArticlesList({ articles }) {
                 />
               </div>
               <div className="flex flex-col justify-between">
-                <h1 className="text-2xl font-semibold mb-4">
+                <h1 className="text-2xl font-semibold font-serif">
                   {article.title}
                 </h1>
+                {/* <p className="text-gray-600 mb-4">{article.description}</p> */}
                 <div className="">
-                  <div className="text-center p-4 bg-gray-50 rounded-lg">
-                    <div className="text-xl font-semibold">{article.price} MAD</div>
+                  <div className="flex justify-end">
+                    <span className="text-sm font-semibold px-3 py-2 bg-gray-100 rounded-lg">{article.price} MAD</span>
                   </div>
                 </div>
                 <button onClick={() => {
@@ -67,6 +68,7 @@ export default function ArticlesList({ articles }) {
             onClick={(e) => e.stopPropagation()}
           >
             <h2 className="text-lg font-semibold mb-4">{selectedArticle.title}</h2>
+            <p className="text-gray-600 mb-4">{selectedArticle.description}</p>
             <p className="text-gray-700 mb-2">Prix : {selectedArticle.price} MAD</p>
             <label className="block mb-2 text-sm font-medium">Quantité :</label>
             <input
@@ -76,6 +78,9 @@ export default function ArticlesList({ articles }) {
               onChange={(e) => setQuantity(Number(e.target.value))}
               className="w-full border border-gray-300 rounded px-3 py-1 mb-4"
             />
+            <div className='mb-4 flex justify-end'>
+              <span className='text-sm font-semibold px-3 py-2 bg-gray-100 rounded-lg'>Total : {quantity*selectedArticle.price}</span>
+            </div>
             <div className="flex items-center justify-end mb-4">
               <button
                 onClick={() => {
@@ -97,32 +102,6 @@ export default function ArticlesList({ articles }) {
           </div>
         </div>
       )}
-
-
-
-      {/* <div
-          key={article.id}
-          className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow p-4"
-        >
-          <button
-            onClick={() => {
-              setSelectedArticle(article);
-              setQuantity(1);
-            }}
-            className="bg-amber-200 p-1 rounded-full transition-colors hover:bg-amber-300 float-right"
-          >
-            <CirclePlus className="h-6 w-6 text-amber-700" />
-          </button>
-          <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-3 border border-gray-200 shadow-sm">
-            <img
-              src={getImage(article.image || 'default.jpg')}
-              alt={article.title}
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <h3 className="font-medium text-gray-800 text-center">{article.title}</h3>
-          <p className="text-sm text-center text-gray-600">{article.price} MAD</p>
-        </div> */}
     </div>
   );
 }
