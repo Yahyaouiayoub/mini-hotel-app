@@ -37,7 +37,7 @@ export default function ArticlesList({ articles }) {
                 />
               </div>
               <div className="flex flex-col justify-between">
-                <h1 className="text-2xl font-semibold font-serif">
+                <h1 className="text-xl font-semibold font-serif">
                   {article.title}
                 </h1>
                 {/* <p className="text-gray-600 mb-4">{article.description}</p> */}
