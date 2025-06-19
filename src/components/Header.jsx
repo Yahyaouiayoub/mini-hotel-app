@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { ShoppingCartIcon, Trash2 } from 'lucide-react';
 import { useDispatch, useSelector } from 'react-redux';
 import { increaseQuantity, decreaseQuantity ,deleteFromCart ,validationCART} from '../Slices/CartSlice';
+import { useNavigate } from 'react-router-dom';
 
 export function Header() {
   const images = import.meta.glob('../images/*.{jpg,png,jpeg,svg}', { eager: true });
@@ -9,6 +10,7 @@ export function Header() {
   const [cart, setCart] = useState(null);
   const [openCart, setOpenCart] = useState(false);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const openCartModal = () => setOpenCart(true);
   const closeCartModal = () => setOpenCart(false);
@@ -44,13 +46,14 @@ export function Header() {
   }
 
   return (
-    <header className="fixed bg-white shadow-sm w-full">
+    <header className="fixed bg-white shadow-sm w-full z-50">
       <div className="max-w-md mx-auto px-4 py-5 flex items-center justify-between">
         <div className="flex items-center">
           <img
-            src="https://placehold.co/100x40/gold/white?text=LUXE"
+            onClick={()=>navigate('/')}
+            src="logo.png"
             alt="Logo Hôtel"
-            className="h-8"
+            className="h-10 w-10 rounded-full object-cover shadow-lg"
           />
           <div className="ml-2 border-l border-gray-300 pl-2">
             <h1 className="text-lg font-semibold text-gray-800">Services de l'hôtel</h1>
