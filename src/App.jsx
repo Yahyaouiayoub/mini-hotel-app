@@ -22,7 +22,7 @@ export function App() {
       <Header />
       
       
-        <main className="flex-1 px-4 pt-4 max-w-md mx-auto w-full">
+        <main className="flex-1 max-w-md mx-auto w-full">
           <Routes>
             <Route path="/" element={<Welcome />} />
 
@@ -30,7 +30,7 @@ export function App() {
             <Route
               path="/home"
               element={
-                <div className="mt-20">
+                <div className="mt-20 px-4 pt-4">
                   <Home />
                 </div>
               }
@@ -39,7 +39,7 @@ export function App() {
             <Route
               path="/service/restaurant"
               element={
-                <div className="mt-24">
+                <div className="mt-24 px-4 pt-4">
                   <Restaurant />
                 </div>
               }
@@ -47,7 +47,7 @@ export function App() {
             <Route
               path="/service/restaurant/:id"
               element={
-                <div className="mt-24">
+                <div className="mt-24 px-4 pt-4">
                   <RestaurantChild />
                 </div>
               }
@@ -56,7 +56,7 @@ export function App() {
             <Route
               path="/service/housekeeping"
               element={
-                <div className="mt-24">
+                <div className="mt-24 px-4 pt-4">
                   <Housekeeping />
                 </div>
               }
@@ -65,7 +65,7 @@ export function App() {
             <Route
               path="/service/shopping"
               element={
-                <div className="mt-24">
+                <div className="mt-24 px-4 pt-4">
                   <Shopping />
                 </div>
               }
@@ -73,7 +73,7 @@ export function App() {
             <Route
               path="/service/shopping/:id"
               element={
-                <div className="mt-24">
+                <div className="mt-24 px-4 pt-4">
                   <ShoppingChild />
                 </div>
               }
@@ -82,7 +82,7 @@ export function App() {
             <Route
               path="/service/reclamations"
               element={
-                <div className="mt-24">
+                <div className="mt-24 px-4 pt-4">
                   <Reclamations />
                 </div>
               }
